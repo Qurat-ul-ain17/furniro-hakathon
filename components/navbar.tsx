@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-
+import Link from "next/link"
 const Navbar = () => {
   return (
     <nav className=" w-full px-4 py-2">
@@ -17,10 +16,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-14">
-        <Link href={"#"}>Home</Link>
-          <Link href={"#"}>Shop</Link>
-          <Link href={"#"}>About</Link>
-          <Link href={"#"}>Contact</Link>
+        <Link href={'/'}><h1>Home</h1></Link>
+          <Link href={'/shop'}><h1>Shop</h1></Link>
+          <Link href={'/about'}>About</Link>
+          <Link href={'/contact'}>Contact</Link>
         </div>
         {/* right section */}
         <div className="flex space-x-8">
