@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import { Button } from './ui/button'
 
 const Hero = () => {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen w-full">
       <div className="absolute inset-0">
         <Image
           src="/assets/wall-bg.png"
@@ -11,46 +12,29 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
+          priority
         />
       </div>
 
       <div className="absolute inset-0"></div>
-      <div className="relative flex items-center justify-end h-full">
-        <div className="bg-[#FFF3E3] p-8 rounded-lg shadow-lg max-w-lg mr-12">
-          <h3 className="text-base font-semibold text-[#333333] mb-2">
+      <div className="relative flex items-center justify-center md:justify-end h-full px-6 md:px-12">
+        <div className="bg-mypink p-6 md:p-8 rounded-lg shadow-lg max-w-[90%] md:max-w-lg text-center md:text-left">
+          <h3 className="text-sm md:text-base font-semibold text-myblack mb-2">
             New Arrival
           </h3>
-          <h1 className="text-5xl font-bold text-[#B88E2F] mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-mymusturd mb-4">
             Discover Our New Collection
           </h1>
-          <p className="text-[#333333] text-lg mb-6">
+          <p className="text-myblack text-sm md:text-lg mb-6 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
-          <button className="w-[222px] px-6 py-3 bg-[#B88E2F] text-white">
+          <Button className="w-full md:w-[222px] px-6 py-3 bg-mymusturd text-white">
             Buy Now
-          </button>
+          </Button>
         </div>
       </div>
     </section>
-    // <div>
-    //     <div className='w-full h-screen '>
-    //         <Image
-    //         src="/assets/wall-bg.png"
-    //         alt='backgroung image'
-    //         width={1440}
-    //         height={100}
-    //         />
-    //         <div className='bg-[#FFF3E3] w-[739px] h-[253px]'>
-    //             <div>
-    //                 <div></div>
-    //                 <h1></h1>
-    //                 <p></p>
-    //                 <div></div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
   )
 }
 

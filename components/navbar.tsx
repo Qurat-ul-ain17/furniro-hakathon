@@ -10,10 +10,12 @@ import {
 } from "./ui/sheet";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+
+
 const Navbar = () => {
   return (
-    <nav className=" w-full px-4 py-2">
-      <div className="w-[1286px] mx-auto flex items-center justify-between px-4">
+    <nav className=" w-full px-4 py-2 bg-white">
+      <div className="max-w-[1286px] mx-auto flex items-center justify-between px-4">
         {/* Logo Section */}
         <div>
           <Image
@@ -35,7 +37,7 @@ const Navbar = () => {
           <Link href={"/contact"}>Contact</Link>
         </div>
         {/* right section */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden lg:flex space-x-8">
           <Image
             src="/assets/account.png"
             alt="account"
@@ -48,13 +50,12 @@ const Navbar = () => {
 
           <Image src="/assets/cart.png" alt="" width={24} height={22} />
         </div>
+        <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger className="flex">
-            <Button variant={"outline"} size={"icon"} className="rounded-full">
+          <SheetTrigger className="flex items-center justify-center">
               <Menu />
-            </Button>
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent side="left">
             <SheetHeader>
               <SheetTitle>
                 <div>
@@ -102,6 +103,7 @@ const Navbar = () => {
             </div>
           </SheetContent>
         </Sheet>
+        </div>
       </div>
     </nav>
   );

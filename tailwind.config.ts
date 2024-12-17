@@ -12,6 +12,15 @@ export default {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			mypink: '#F9F1E7',
+			mylightpink: '#FCF8F3',
+			mygray: '#9F9F9F',
+			mylightestgray:"#B0B0B0",
+			mylightgray:"#F4F5F7",
+			mymediumgray:"#898989",
+			myblack:'#333333',
+			mylightblack:'#3A3A3A',
+			mymusturd:"#B88E2F",
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
